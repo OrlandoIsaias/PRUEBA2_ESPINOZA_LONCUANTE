@@ -71,44 +71,45 @@
   </div>
 </div>
 
-<!--CARRITO DE COMPRAS-->
+<!--Navbar-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a href="index.html">
-      <img class="logo" src="imagenes/Florería Villaflores.png" alt="Bootstrap">
+    <img class="logo" src="imagenes/Florería Villaflores.png" alt="Bootstrap">
     </a>
     
-    <div class="menu-principal">
-      <ul class="menu-items">
-        <li class="item-menu">
-          <a href="flores.html">
-            🌸
-            <span class="texto-menu">Flores</span>
-          </a>
-        </li>
+      <div class="menu-principal">
+        <ul class="menu-items">
+          <li class="item-menu">
+            <a href="flores.html">
+              🌸
+              <span class="texto-menu">Flores</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="arbustos.html">
-            🍀
-            <span class="texto-menu">Arbustos</span>
-          </a>
-        </li>
+          <li class="item-menu">
+            <a href="arbustos.html">
+              🍀
+              <span class="texto-menu">Arbustos</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="tierradehojas.html">
-            🌾
-            <span class="texto-menu">Tierra de hojas</span>
-          </a>
-        </li>
+          <li class="item-menu">
+            <a href="tierradehojas.html">
+              🌾
+              <span class="texto-menu">Tierra de hojas</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="maceteros.html">
-            🌱
-            <span class="texto-menu">Maceteros</span>
-          </a>
-        </li>
-      
-        <!--CARRITO DE COMPRAS(Nuevo)-->
+          <li class="item-menu">
+            <a href="maceteros.html">
+              🌱
+              <span class="texto-menu">Maceteros</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
       <div class="container-icon">
         <div class="container-cart-icon">
           <svg
@@ -129,44 +130,42 @@
             <span id="contador-productos">0</span>
           </div>
         </div>
-
-        <div class="container-cart-products hidden-cart">
-          <div class="row-product hidden">
-            <div class="cart-product">
-              <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">1</span>
-                <p class="titulo-producto-carrito">Zapatos Nike</p>
-                <span class="precio-producto-carrito">$80</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-close"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+    
+      <div class="container-cart-products hidden-cart">
+        <div class="row-product hidden">
+          <div class="cart-product">
+            <div class="info-cart-product">
+              <span class="cantidad-producto-carrito">1</span>
+              <p class="titulo-producto-carrito">Zapatos Nike</p>
+              <span class="precio-producto-carrito">$80</span>
             </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </div>
-
-          <div class="cart-total hidden">
-            <h3>Total:</h3>
-            <span class="total-pagar">$200</span>
-          </div>
-          <p class="cart-empty">El carrito está vacío</p>
         </div>
+  
+        <div class="cart-total hidden">
+          <h3>Total:</h3>
+          <span class="total-pagar">$200</span>
+        </div>
+        <p class="cart-empty">El carrito está vacío</p>
       </div>
-    </ul>
     </div>
   </div>
-</nav>
- 
+  </div>
+</nav> 
 <!--IMAGEN DE FONDO FLORES-->
 <div class="container-imagen">
   <img src="imagenes/FONDO1.avif" alt="Imagen de fondo" class="imagen-fondo">
@@ -176,115 +175,66 @@
 </div>
 
 <!--CONTAINER QUE CONTIENE TODAS LAS CARDS-->
-<div class="container">
+<div class="container-items">
   <div class="row">
 
     <!--PRIMERA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/FLOR1.png" class="card-img-top" alt="Alsometria Fucsia">
-        <div class="card-body">
-          <h5 class="card-title">Alsometria Fucsia</h5>
-          <p class="card-text">Descripción: Ramo entre 8 a 10 varas</p>
-          <p class="card-text">Duración: 15 días</p>
-          <p class="card-text">Precio: $8.990</p>
+    <div class="item">
+        <div class="card">
+          <img src="imagenes/FLOR1.png" class="card-img-top" alt="producto">
+          <div class="info-product">
+          <h2 class="card-text">Alsometria Fucsia</h2>
+          <p class="price">$8990</p>
+          <h class="card-text">Descripción: Ramo entre 8 a 10 varas</h>
+          <h class="card-text">Duración: 15 días</h>
           
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          
+          <button class="btn-add-cart">
             Agregar al carrito
           </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
     <!--SEGUNDA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/FLOR2.png" class="card-img-top" alt="Alsometria Roja">
-        <div class="card-body">
-          <h5 class="card-title">Alsometria Roja</h5>
-          <p class="card-text">Descripción: Ramo entre 8 a 10 varas</p>
-          <p class="card-text">Duración: 15 días</p>
-          <p class="card-text">Precio: $8.990</p>
+    <div class="item">  
+      <div class="card">
+        <img src="imagenes/FLOR2.png" class="card-img-top" alt="producto">
+        <div class="info-product">
+          <h2 class="card-text">Alsometria Roja</h2>
+          <p class="price">$8990</p>
+          <h class="card-text">Descripción: Ramo entre 8 a 10 varas</h>
+          <h4 class="card-text">Duración: 15 días</h>
           
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          
+          <button class="btn-add-cart">
             Agregar al carrito
           </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
     <!--TERCERA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/FLOR3.png" class="card-img-top" alt="Flor1">
-        <div class="card-body">
-          <h5 class="card-title">Alsometria Rosa</h5>
-          <p class="card-text">Descripción: Ramo entre 8 a 10 varas </p>
-          <p class="card-text">Duración: 15 días</p>
-          <p class="card-text">Precio: $8.990</p>
+    <div class="item">  
+      <div class="card">
+          <img src="imagenes/FLOR3.png" class="card-img-top" alt="producto">
+          <div class="info-product">
+            <h2 class="card-text">Alsometria Rosa</h2>
+            <p class="price">$8990</p>
+            <h class="card-text">Descripción: Ramo entre 8 a 10 varas </h>
+            <h class="card-text">Duración: 15 días</h>
+            
           
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button class="btn-add-cart">
             Agregar al carrito
-          </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
+            </button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 <!--PIE DE PAGINA-->
 <footer class="footer">
   <div class="container">
@@ -319,5 +269,5 @@
   </div>
 </footer>
 <script src="funciones.js"></script>
-</body>
+  </body>
 </html>
