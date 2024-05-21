@@ -1,22 +1,4 @@
 
-//BOTON CANCELAR FORMULARIO
-function cancelar() {
-
-    alert('Operación cancelada.');
-    var overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
-}
-//BOTON REGISTRO FORMULARIO
-document.getElementById('botonRegistro').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'flex';
-});
-//BOTON CERRAR FORMULARIO
-document.getElementById('closeFormButton').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'none';
-});
-
-
-
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector(
 	'.container-cart-products'
@@ -86,3 +68,20 @@ document.getElementById('darkModeSwitch').addEventListener('change', function() 
     document.body.classList.toggle('dark-mode');
     document.getElementById('barra-verde').classList.toggle('dark-mode');
   });
+
+  
+//BOTON CANCELAR FORMULARIO
+function cancelar() {
+
+    alert('Operación cancelada.');
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+}
+//BOTON REGISTRO FORMULARIO
+document.getElementById('botonRegistro').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'flex';
+});
+//BOTON CERRAR FORMULARIO
+document.getElementById('closeFormButton').addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'none';
+});
