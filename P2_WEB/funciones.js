@@ -1,16 +1,21 @@
+
+//BOTON CANCELAR FORMULARIO
+function cancelar() {
+
+    alert('Operación cancelada.');
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+}
+//BOTON REGISTRO FORMULARIO
 document.getElementById('botonRegistro').addEventListener('click', function() {
     document.getElementById('overlay').style.display = 'flex';
 });
-
+//BOTON CERRAR FORMULARIO
 document.getElementById('closeFormButton').addEventListener('click', function() {
     document.getElementById('overlay').style.display = 'none';
 });
 
-window.addEventListener('click', function(event) {
-    if (event.target === document.getElementById('overlay')) {
-        document.getElementById('overlay').style.display = 'none';
-    }
-});
+
 
 const btnCart = document.querySelector('.container-cart-icon');
 const containerCartProducts = document.querySelector(
@@ -21,6 +26,8 @@ btnCart.addEventListener('click', () => {
 	containerCartProducts.classList.toggle('hidden-cart');
 });
 
+
+//VALIDAR CAMPOS FORMULARIO REGISTRO
 document.getElementById('form').addEventListener('submit', function(event) {
     var emailFormulario = document.getElementById('email');
     var nombreFormulario = document.getElementById('nombre');
@@ -73,6 +80,8 @@ document.getElementById('form').addEventListener('submit', function(event) {
     }
 });
 
+
+//CAMBIAR MODO OSCURO
 document.getElementById('darkModeSwitch').addEventListener('change', function() {
     document.body.classList.toggle('dark-mode');
     document.getElementById('barra-verde').classList.toggle('dark-mode');
