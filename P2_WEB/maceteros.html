@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 </head>
 
 <!--BODY DE LA PAGINA-->
@@ -45,6 +47,8 @@
   </div>
 </div>
 
+<!--FORMULARIO-->
+
 <div id="overlay" class="overlay">
   <div class="overlay-content">
       <span class="close-button" id="closeFormButton">&times;</span>
@@ -70,9 +74,14 @@
             <span class="input-group-text" id="basic-addon1">Telefono: </span>
             <input id="telefono" type="text" class="form-control" placeholder="Ingrese su número" aria-label="Username" aria-describedby="basic-addon1">
           </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Contraseña: </span>
+            <input id="contrasena" type="password" class="form-control" placeholder="Ingrese su contraseña" aria-label="Password" aria-describedby="basic-addon1">
+          </div>
           
-          <button type="submit">Aceptar</button>
-          <button type="button" onclick="cancelar()">Cancelar</button>
+          <button type="submit" class="btn-aceptar">Aceptar</button>
+          <button type="button" class="btn-cancelar"onclick="cancelar()">Cancelar</button>
           
       </form>
       <div id="error-messages"></div>
@@ -83,40 +92,41 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a href="index.html">
-      <img class="logo" src="imagenes/Florería Villaflores.png" alt="Bootstrap">
+    <img class="logo" src="imagenes/Florería Villaflores.png" alt="Bootstrap">
     </a>
     
-    <div class="menu-principal">
-      <ul class="menu-items">
-        <li class="item-menu">
-          <a href="flores.html">
-            🌸
-            <span class="texto-menu">Flores</span>
-          </a>
-        </li>
+      <div class="menu-principal">
+        <ul class="menu-items">
+          <li class="item-menu">
+            <a href="flores.html">
+              🌸
+              <span class="texto-menu">FLORES</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="arbustos.html">
-            🍀
-            <span class="texto-menu">Arbustos</span>
-          </a>
-        </li>
+          <li class="item-menu">
+            <a href="arbustos.html">
+              🍀
+              <span class="texto-menu">ARBUSTOS</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="tierradehojas.html">
-            🌾
-            <span class="texto-menu">Tierra de hojas</span>
-          </a>
-        </li>
+          <li class="item-menu">
+            <a href="tierradehojas.html">
+              🌾
+              <span class="texto-menu">TIERRA DE HOJAS</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="maceteros.html">
-            🌱
-            <span class="texto-menu">Maceteros</span>
-          </a>
-        </li>
-      
-        <!--CARRITO DE COMPRAS(Nuevo)-->
+          <li class="item-menu">
+            <a href="maceteros.html">
+              🌱
+              <span class="texto-menu">MACETEROS</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
       <div class="container-icon">
         <div class="container-cart-icon">
           <svg
@@ -137,43 +147,42 @@
             <span id="contador-productos">0</span>
           </div>
         </div>
-
-        <div class="container-cart-products hidden-cart">
-          <div class="row-product hidden">
-            <div class="cart-product">
-              <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">1</span>
-                <p class="titulo-producto-carrito">Zapatos Nike</p>
-                <span class="precio-producto-carrito">$80</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-close"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+    
+      <div class="container-cart-products hidden-cart">
+        <div class="row-product hidden">
+          <div class="cart-product">
+            <div class="info-cart-product">
+              <span class="cantidad-producto-carrito"></span>
+              <p class="titulo-producto-carrito"></p>
+              <span class="precio-producto-carrito"></span>
             </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </div>
-
-          <div class="cart-total hidden">
-            <h3>Total:</h3>
-            <span class="total-pagar">$200</span>
-          </div>
-          <p class="cart-empty">El carrito está vacío</p>
         </div>
+  
+        <div class="cart-total hidden">
+          <h3>Total:</h3>
+          <span class="total-pagar"></span>
+        </div>
+        <p class="cart-empty">El carrito está vacio</p>
       </div>
-    </ul>
     </div>
   </div>
-</nav>
+  </div>
+</nav> 
 
 <!--IMAGEN DE FONDO MACETEROS-->
 <div class="container-imagen">
@@ -184,171 +193,122 @@
 </div>
 
 <!--CONTAINER QUE CONTIENE TODAS LAS CARDS-->
-<div class="container">
-  <div class="row">
-
-    <!--PRIMERA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/MACETERO1.png" class="card-img-top" alt="Alsometria Fucsia">
-        <div class="card-body">
-          <h5 class="card-title">Macetero Enlozado Azul Decogreen</h5>
-          <p class="card-text">Dimensiones: 20 x 18 x 18 cm</p>
-          <p class="card-text">Capacidad: 4.2 lt</p>
-          <p class="card-text">Precio: $13.290</p>
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar al carrito
-          </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--SEGUNDA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/MACETERO2.png" class="card-img-top" alt="Macetero">
-        <div class="card-body">
-          <h5 class="card-title">Macetero Enlozado Blanco Decogreen</h5>
-          <p class="card-text">Dimensiones: 20 x 18 x 18 cm</p>
-          <p class="card-text">Capacidad: 4.2 lt</p>
-          <p class="card-text">Precio: $8.990</p>
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar al carrito
-          </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--TERCERA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/MACETERO3.png" class="card-img-top" alt="Flor1">
-        <div class="card-body">
-          <h5 class="card-title">Macetero Enlozado Blanco Decogreen</h5>
-          <p class="card-text">Dimensiones: 17 x 15 x 15 cm</p>
-          <p class="card-text">Capacidad: 2.4 lt</p>
-          <p class="card-text">Precio: $10.490</p>
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar al carrito
-          </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="container-items">
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO1.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Enlozado Azul - 4.2L</h2>
+      <p class="price">$13290</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
   </div>
-</div>
-
-<div class="container-items">
-  <div class="row">
-
-    <!--PRIMERA CARD-->
-    <div class="item">
-        <div class="card">
-          <img src="imagenes/FLOR1.png" class="card-img-top" alt="producto">
-          <div class="info-product">
-          <h2 class="card-text">Alsometria Fucsia</h2>
-          <p class="price">$8.990</p>
-          <h class="card-text">Descripción: Ramo entre 8 a 10 varas</h>
-          <h class="card-text">Duración: 15 días</h>
-          
-          
-          <button class="btn-add-cart">
-            Agregar al carrito
-          </button>
-        </div>
-      </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO2.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Enlozado Blanco - 4.2L</h2>
+      <p class="price">$13290</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
-
-    <!--SEGUNDA CARD-->
-    <div class="item">  
-      <div class="card">
-        <img src="imagenes/FLOR2.png" class="card-img-top" alt="producto">
-        <div class="info-product">
-          <h2 class="card-text">Alsometria Roja</h2>
-          <p class="price">$8.990</p>
-          <h class="card-text">Descripción: Ramo entre 8 a 10 varas</h>
-          <h4 class="card-text">Duración: 15 días</h>
-          
-          
-          <button class="btn-add-cart">
-            Agregar al carrito
-          </button>
-        </div>
-      </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO3.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Enlozado Blanco - 2.4L</h2>
+      <p class="price">$10490</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
-
-    <!--TERCERA CARD-->
-    <div class="item">  
-      <div class="card">
-          <img src="imagenes/FLOR3.png" class="card-img-top" alt="producto">
-          <div class="info-product">
-            <h2 class="card-text">Alsometria Rosa</h2>
-            <p class="price">$8.990</p>
-            <h class="card-text">Descripción: Ramo entre 8 a 10 varas </h>
-            <h class="card-text">Duración: 15 días</h>
-            
-          
-            <button class="btn-add-cart">
-            Agregar al carrito
-            </button>
-        </div>
-      </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO4.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Enlozado Blanco - 1.5L</h2>
+      <p class="price">$7690</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO5.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Enlozado Mostaza - 4.2L</h2>
+      <p class="price">$13290</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO6.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Enlozado Oliva - 4.2L</h2>
+      <p class="price">$13290</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO7.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Rotomoldeado Gris- 48L</h2>
+      <p class="price">$23990</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO8.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Rotomoldeado Arena - 74L</h2>
+      <p class="price">$41990</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/MACETERO9.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Macetero Rotomoldeado Blanco - 48L</h2>
+      <p class="price">$29990</p>
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
   </div>
 </div>
@@ -388,5 +348,8 @@
 </footer>
 
 <script src="funciones.js"></script>  
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

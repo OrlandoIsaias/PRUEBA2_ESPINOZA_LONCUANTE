@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
 </head>
 
 <!--BODY DE LA PAGINA-->
@@ -40,7 +41,6 @@
       <input type="checkbox" id="darkModeSwitch">
       <span class="slider round"></span>
     </label>
-
   </div>
 </div>
 
@@ -69,53 +69,58 @@
             <span class="input-group-text" id="basic-addon1">Telefono: </span>
             <input id="telefono" type="text" class="form-control" placeholder="Ingrese su número" aria-label="Username" aria-describedby="basic-addon1">
           </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Contraseña: </span>
+            <input id="contrasena" type="password" class="form-control" placeholder="Ingrese su contraseña" aria-label="Password" aria-describedby="basic-addon1">
+          </div>
           
-          <button type="submit">Aceptar</button>
-          <button type="button" onclick="cancelar()">Cancelar</button>
+          <button type="submit" class="btn-aceptar">Aceptar</button>
+          <button type="button" class="btn-cancelar"onclick="cancelar()">Cancelar</button>
           
       </form>
       <div id="error-messages"></div>
   </div>
 </div>
 
-<!--CARRITO DE COMPRAS-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a href="index.html">
-      <img class="logo" src="imagenes/Florería Villaflores.png" alt="Bootstrap">
+    <img class="logo" src="imagenes/Florería Villaflores.png" alt="Bootstrap">
     </a>
     
-    <div class="menu-principal">
-      <ul class="menu-items">
-        <li class="item-menu">
-          <a href="flores.html">
-            🌸
-            <span class="texto-menu">Flores</span>
-          </a>
-        </li>
+      <div class="menu-principal">
+        <ul class="menu-items">
+          <li class="item-menu">
+            <a href="flores.html">
+              🌸
+              <span class="texto-menu">FLORES</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="arbustos.html">
-            🍀
-            <span class="texto-menu">Arbustos</span>
-          </a>
-        </li>
+          <li class="item-menu">
+            <a href="arbustos.html">
+              🍀
+              <span class="texto-menu">ARBUSTOS</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="tierradehojas.html">
-            🌾
-            <span class="texto-menu">Tierra de hojas</span>
-          </a>
-        </li>
+          <li class="item-menu">
+            <a href="tierradehojas.html">
+              🌾
+              <span class="texto-menu">TIERRA DE HOJAS</span>
+            </a>
+          </li>
 
-        <li class="item-menu">
-          <a href="maceteros.html">
-            🌱
-            <span class="texto-menu">Maceteros</span>
-          </a>
-        </li>
-      
-        <!--CARRITO DE COMPRAS(Nuevo)-->
+          <li class="item-menu">
+            <a href="maceteros.html">
+              🌱
+              <span class="texto-menu">MACETEROS</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
       <div class="container-icon">
         <div class="container-cart-icon">
           <svg
@@ -136,43 +141,42 @@
             <span id="contador-productos">0</span>
           </div>
         </div>
-
-        <div class="container-cart-products hidden-cart">
-          <div class="row-product hidden">
-            <div class="cart-product">
-              <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">1</span>
-                <p class="titulo-producto-carrito">Zapatos Nike</p>
-                <span class="precio-producto-carrito">$80</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-close"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+    
+      <div class="container-cart-products hidden-cart">
+        <div class="row-product hidden">
+          <div class="cart-product">
+            <div class="info-cart-product">
+              <span class="cantidad-producto-carrito"></span>
+              <p class="titulo-producto-carrito"></p>
+              <span class="precio-producto-carrito"></span>
             </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </div>
-
-          <div class="cart-total hidden">
-            <h3>Total:</h3>
-            <span class="total-pagar">$200</span>
-          </div>
-          <p class="cart-empty">El carrito está vacío</p>
         </div>
+  
+        <div class="cart-total hidden">
+          <h3>Total:</h3>
+          <span class="total-pagar"></span>
+        </div>
+        <p class="cart-empty">El carrito está vacio</p>
       </div>
-    </ul>
     </div>
   </div>
-</nav>
+  </div>
+</nav> 
   
 <!--IMAGEN DE FONDO ARBUSTOS-->
 <div class="container-imagen">
@@ -183,201 +187,514 @@
 </div>
 
 <!--CONTAINER QUE CONTIENE TODAS LAS CARDS-->
-<div class="container">
-  <div class="row">
-
-    <!--PRIMERA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/ARBUSTO1.png" class="card-img-top" alt="Alsometria Fucsia">
-        <div class="card-body">
-          <h5 class="card-title">Abelia Blanca - Abelia X Grandiflora</h5>
-          <p class="card-text">Descripción: Especie atractiva por su abundante floración blanca. Es ideal para combinarla con otras plantas formando macizos</p>
-          <p class="card-text">Origen: Asia</p>
-          <p class="card-text">Precio: $7.500</p>
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar al carrito
-          </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="container-items">
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO1.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Abelia Blanca - Grandiflora</h2>
+      <p class="price">$7500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample1">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Especie atractiva por su abundante floración blanca, ideal para combinarla con otras plantas formando macizos</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Asia</li>
+              <li>Dimensiones Finales: 3m. de altura y diámetro aprox</li>
+              <li>Exposición: Sol</li>
+              <li>Necesidad Hidrica: Media</li>
+              <li>Resistencia: Alta. Debe protegerse de los vientos fríos</li>
+              <li>Epoca De Floracion: Verano - Otoño.</li>
+            </ul>
         </div>
       </div>
-    </div>
-
-    <!--SEGUNDA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/ARBUSTO2.png" class="card-img-top" alt="Alsometria Roja">
-        <div class="card-body">
-          <h5 class="card-title">Abutilon amarillo - Abutilón X Hybridum</h5>
-          <p class="card-text">Descripción: Arbusto De Gran Valor Ornamental Por Sus Flores Con Forma De Campanita Atrae Colibríes En Los Meses De Floración</p>
-          <p class="card-text">Origen: Brasil Y Asia Tropical.</p>
-          <p class="card-text">Precio: $12.500</p>
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar al carrito
-          </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--TERCERA CARD-->
-    <div class="col-md-4 mb-3">  <div class="card">
-        <img src="imagenes/ARBUSTO3.png" class="card-img-top" alt="Flor1">
-        <div class="card-body">
-          <h5 class="card-title">Arrayan - Luma Chequen, Myrceugenia apiculata.</h5>
-          <p class="card-text">Descripción: Especie de gran atractivo por su elegante follaje siempreverde y floración. Atractivo arbusto para las abejas mieliferas.</p>
-          <p class="card-text">Origen: Chile y Argentina.</p>
-          <p class="card-text">Precio: $10.500</p>
-          
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Agregar al carrito
-          </button>
-
-          
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmación</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  ¿Confirma que desea agregar el producto al carrito?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No agregar</button>
-                  <button type="button" class="btn btn-primary">Agregar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--CARRITO DE COMPRAS-->
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Carrito de Compras :)</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-
-    <!--PRIMER ITEM CARRITO-->
-    <div>
-      <img src="imagenes/FLOR1.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Alsometria Fucsia</h5>
-        <hr>
-        <p class="card-text">Descripción: Ramo entre 8 a 10 varas</p>
-        <p class="card-text">Duración: 15 días</p>
-        <p class="card-text">Precio: $8.990</p>
-        <p class="card-text">Cantidad: 2</p>
-        <p class="card-text">Subtotal: $17.980</p>
-        
-      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
       
     </div>
-    <!--SEGUNDO ITEM CARRITO-->
-    <div>
-      <img src="imagenes/FLOR2.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Alsometria Roja</h5>
-        <hr>
-        <p class="card-text">Descripción: Ramo entre 8 a 10 varas</p>
-        <p class="card-text">Duración: 15 días</p>
-        <p class="card-text">Precio: $8.990</p>
-        <p class="card-text">Cantidad: 1</p>
-        <p class="card-text">Subtotal: $8.990</p>
-        
-      </div>
-      
-    </div>
-    <h2>total: $26.970</h2>
-  
-  
-  
   </div>
-    <!--BOTON PARA PAGAR-->
-    <div class="botonaso">
-      <h3>Ir a Pagar</h4>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO2.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Abutilon Amarillo - Hybridum</h2>
+      <p class="price">$12500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample2">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto de gran valor que por sus flores con forma de campana atrae colibríes en los meses de floración</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Brasil Y Asia tropical</li>
+              <li>Dimensiones Finales: 3m de altura aprox</li>
+              <li>Exposición: Sol o semisombra</li>
+              <li>Necesidad Hidrica: Media</li>
+              <li>Resistencia: Media, puede ser sensible a heladas</li>
+              <li>Epoca De Floracion: Primavera - Otoño</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO3.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Arrayan - Luma Chequen</h2>
+      <p class="price">$14990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample3">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Especie de gran atractivo por su elegante follaje siempreverde, atrae abejas</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Chile y Argentina</li>
+              <li>Dimension Final: 4m</li>
+              <li>Exposición: Semisombra</li>
+              <li>Necesidad Hidrica: Media, lugares humedos</li>
+              <li>Resistencia: Media</li>
+              <li>Epoca De Floracion: Primavera - Otoño</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO4.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Berberis Atropurpurea</h2>
+      <p class="price">$9600</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample4">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto atractivo por su follaje púrpura, floración amarilla y espinoso</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Japón</li>
+              <li>Dimensiones Finales: 2m de altura y 3m de diámetro aprox</li>
+              <li>Exposición: Sol</li>
+              <li>Necesidad Hidrica: Media</li>
+              <li>Resistencia: Alta. Tolera la helada</li>
+              <li>Epoca De Floracion: Primavera</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO5.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Acacia Capense</h2>
+      <p class="price">$8990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample5">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Especie ideal para ser usada como cerco vivo, por su resistencia a La poda y sus espinas</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Australia</li>
+              <li>Dimensiones Finales: 6m de altura aprox</li>
+              <li>Exposición: Sol</li>
+              <li>Necesidad Hidrica: Baja</li>
+              <li>Resistencia: Alta</li>
+              <li>Epoca De Floracion: Verano</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO6.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Camelia japonica</h2>
+      <p class="price">$48500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample6">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto de gran tamaño y muy bonita floración, la cual puede presentar diferentes colores</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Asia</li>
+              <li>Dimensión Final: 10m de altura y 8m de diámetro aprox</li>
+              <li>Exposición: Semisombra</li>
+              <li>Necesidad Hidrica: Media</li>
+              <li>Resistencia: Media, no tolera suelos calcareos</li>
+              <li>Epoca De Floracion: Primavera</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO7.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Buddleja Davidii</h2>
+      <p class="price">$15500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample7">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto de gran tamaño y preciosa floración, ideal para atraer mariposas</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: China</li>
+              <li>Dimensiones Finales: 5m aprox de altura Y diámetro</li>
+              <li>Exposición: Sol</li>
+              <li>Necesidad Hidrica: Media</li>
+              <li>Resistencia: Alta</li>
+              <li>Epoca De Floracion: Primavera - Verano</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO8.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Choisya Ternata</h2>
+      <p class="price">$15500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample8">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample8">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto compacto con bonita floración blanca aromática</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Centroamérica</li>
+              <li>Dimensiones Finales: 2m de altura y diámetro aprox</li>
+              <li>Exposición: Semisombra</li>
+              <li>Necesidad Hidrica: Media</li>
+              <li>Resistencia: Media, tolera la contaminación</li>
+              <li>Epoca De Floracion: Primavera</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO9.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Ceanoto Rasteero</h2>
+      <p class="price">$5600</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample9">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample9">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto rastrero y compacto de abundante floración azul, ideal para primeras líneas de macizos</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: California</li>
+              <li>Dimensiones Finales: 1.5m de altura y 2.5m de diámetro aprox</li>
+              <li>Exposición: Sol</li>
+              <li>Necesidad Hidrica: Media - Baja</li>
+              <li>Resistencia: Alta. Tolera helada y suelos calizos</li>
+              <li>Epoca De Floracion: Primavera</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO10.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Calistemon Citrinus</h2>
+      <p class="price">$12500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample10" aria-expanded="false" aria-controls="collapseExample10">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample10">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto de gran tamaño y preciosa floración, esta a su vez atrae mariposa</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: China</li>
+              <li>Dimensiones Finales: 5m aprox de altura y diámetro</li>
+              <li>Exposición: Sol</li>
+              <li>Necesidad Hidrica: Media</li>
+              <li>Resistencia: Alta, tolera climas costeros</li>
+              <li>Epoca De Floracion: Verano</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO11.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Euphorbia coralioide</h2>
+      <p class="price">$5400</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample11" aria-expanded="false" aria-controls="collapseExample11">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample11">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto pequeño adecuado para jardines costeros e informales.Altamente tóxica al ingerirse</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Italia</li>
+              <li>Dimensión final: 0.5m de altura y diametro</li>
+              <li>Exposición: Sol, semisombra</li>
+              <li>Necesidad hídrica: Baja. Resistente a la sequía y al calor</li>
+              <li>Resistencia: Prefiere suelos pedregosos, con buen drenaje</li>
+              <li>Epoca De Floracion: Promavera - Otoño</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO12.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Heteromeles Arbutifolia</h2>
+      <p class="price">$18500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample12" aria-expanded="false" aria-controls="collapseExample12">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample12">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Atractivo arbusto que destaca por sus llamativos frutos rojos en otoño</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: California</li>
+              <li>Dimensión Final: 3m</li>
+              <li>Exposición: Sol, semisombra</li>
+              <li>Necesidad hídrica: Baja. Resistente a la sequía</li>
+              <li>Resistencia: Resistente a la helada, resiste aire salino</li>
+              <li>Epoca De Floracion: Primavera</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO13.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Hortensia</h2>
+      <p class="price">$15500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample13" aria-expanded="false" aria-controls="collapseExample13">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample13">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto muy popular por su floración, ideal para aportar color en macizos</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Japón</li>
+              <li>Dimensión Final: 1 a 1.5m de altura aprox</li>
+              <li>Exposición: Sol, semisombra</li>
+              <li>Necesidad hídrica: Alta</li>
+              <li>Resistencia: Media</li>
+              <li>Epoca De Floracion: Verano</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO14.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Hortensia Rosada</h2>
+      <p class="price">$15500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample14" aria-expanded="false" aria-controls="collapseExample14">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample14">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto muy popular por su floración, ideal para aportar color en macizos</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Japón</li>
+              <li>Dimensión Final: 1 a 1.5m de altura aprox</li>
+              <li>Exposición: Sol, semisombra</li>
+              <li>Necesidad hídrica: Alta</li>
+              <li>Resistencia: Media</li>
+              <li>Epoca De Floracion: Verano</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/ARBUSTO15.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Jazmin de Siberia</h2>
+      <p class="price">$27500</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample15" aria-expanded="false" aria-controls="collapseExample15">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample15">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>Arbusto muy utilizado en jardinería por sus flores aromáticas, se desarrolla mejor en climas templados</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Origen: Armenia, Cáucaso, Sureste De Europa</li>
+              <li>Dimensión Final: 2m - 3m de diámetro </li>
+              <li>Exposición: Sol, semisombra</li>
+              <li>Necesidad hídrica: Alta</li>
+              <li>Resistencia: Alta</li>
+              <li>Epoca De Floracion: Primavera</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
 </div>
 
 
 <!--PIE DE PAGINA-->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5 class="footer-title">VillaFlores</h5>
-          
-          <div class="social-links">
-            <a href="#" class="social-link"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <h5 class="footer-title">Enlaces</h5>
-          <ul class="footer-list">
-            <li><a href="#" class="footer-link">Inicio</a></li>
-            <li><a href="#" class="footer-link">Sobre Nosotros</a></li>
-            <li><a href="#" class="footer-link">Productos</a></li>
-            <li><a href="#" class="footer-link">Contacto</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="footer-title">Contacto</h5>
-          <p class="footer-text">Correo electrónico: <a href="mailto:tuemail@ejemplo.com">villaflores@gmail.com</a></p>
-          <p class="footer-text">Teléfono: +56 9 1234 5678</p>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="footer-title">VillaFlores</h5>
+        
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
+      <div class="col-md-4">
+        <h5 class="footer-title">Enlaces</h5>
+        <ul class="footer-list">
+          <li><a href="#" class="footer-link">Inicio</a></li>
+          <li><a href="#" class="footer-link">Sobre Nosotros</a></li>
+          <li><a href="#" class="footer-link">Productos</a></li>
+          <li><a href="#" class="footer-link">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="footer-title">Contacto</h5>
+        <p class="footer-text">Correo electrónico: <a href="mailto:tuemail@ejemplo.com">villaflores@gmail.com</a></p>
+        <p class="footer-text">Teléfono: +56 9 1234 5678</p>
+      </div>
     </div>
-    <div class="copyright">
-      <p class="copyright-text">Copyright &copy; 2024 Villaflores. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="copyright">
+    <p class="copyright-text">Copyright &copy; 2024 Villaflores. Todos los derechos reservados.</p>
+  </div>
+</footer>
   
 
   <script src="funciones.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

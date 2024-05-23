@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  
 </head>
 
 <!--BODY DE LA PAGINA-->
@@ -70,8 +72,13 @@
             <input id="telefono" type="text" class="form-control" placeholder="Ingrese su número" aria-label="Username" aria-describedby="basic-addon1">
           </div>
           
-          <button type="submit">Aceptar</button>
-          <button type="button" onclick="cancelar()">Cancelar</button>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Contraseña: </span>
+            <input id="contrasena" type="password" class="form-control" placeholder="Ingrese su contraseña" aria-label="Password" aria-describedby="basic-addon1">
+          </div>
+          
+          <button type="submit" class="btn-aceptar">Aceptar</button>
+          <button type="button" class="btn-cancelar"onclick="cancelar()">Cancelar</button>
           
       </form>
       <div id="error-messages"></div>
@@ -90,28 +97,28 @@
           <li class="item-menu">
             <a href="flores.html">
               🌸
-              <span class="texto-menu">Flores</span>
+              <span class="texto-menu">FLORES</span>
             </a>
           </li>
 
           <li class="item-menu">
             <a href="arbustos.html">
               🍀
-              <span class="texto-menu">Arbustos</span>
+              <span class="texto-menu">ARBUSTOS</span>
             </a>
           </li>
 
           <li class="item-menu">
             <a href="tierradehojas.html">
               🌾
-              <span class="texto-menu">Tierra de hojas</span>
+              <span class="texto-menu">TIERRA DE HOJAS</span>
             </a>
           </li>
 
           <li class="item-menu">
             <a href="maceteros.html">
               🌱
-              <span class="texto-menu">Maceteros</span>
+              <span class="texto-menu">MACETEROS</span>
             </a>
           </li>
         </ul>
@@ -142,9 +149,9 @@
         <div class="row-product hidden">
           <div class="cart-product">
             <div class="info-cart-product">
-              <span class="cantidad-producto-carrito">1</span>
-              <p class="titulo-producto-carrito">Zapatos Nike</p>
-              <span class="precio-producto-carrito">$80</span>
+              <span class="cantidad-producto-carrito"></span>
+              <p class="titulo-producto-carrito"></p>
+              <span class="precio-producto-carrito"></span>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -165,9 +172,9 @@
   
         <div class="cart-total hidden">
           <h3>Total:</h3>
-          <span class="total-pagar">$200</span>
+          <span class="total-pagar"></span>
         </div>
-        <p class="cart-empty">El carrito está vacío</p>
+        <p class="cart-empty">El carrito está vacio</p>
       </div>
     </div>
   </div>
@@ -183,60 +190,561 @@
 
 <!--CONTAINER QUE CONTIENE TODAS LAS CARDS-->
 <div class="container-items">
-  <div class="row">
-
-    <!--PRIMERA CARD-->
-    <div class="item">
-        <div class="card">
-          <img src="imagenes/FLOR1.png" class="card-img-top" alt="producto">
-          <div class="info-product">
-          <h2 class="card-text">Alsometria Fucsia</h2>
-          <p class="price">$8990</p>
-          <h class="card-text">Descripción: Ramo entre 8 a 10 varas</h>
-          <h class="card-text">Duración: 15 días</h>
-          
-          
-          <button class="btn-add-cart">
-            Agregar al carrito
-          </button>
+  <div class="item">
+    <figure>
+      <img src="imagenes/FLOR1.png" alt="producto" />
+    </figure>
+    <div class="info-product">
+      <h2>Alsometria Fucsia</h2>
+      <p class="price">$8990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample1">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Alsometria Fucsia es una hermosa flor con pétalos vibrantes y una fragancia cautivadora. Ideal para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8 - 10</li>
+              <li>Altura: 30 cm</li>
+              <li>Color: Fucsia</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
         </div>
       </div>
+
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
+  </div>
 
-    <!--SEGUNDA CARD-->
-    <div class="item">  
-      <div class="card">
-        <img src="imagenes/FLOR2.png" class="card-img-top" alt="producto">
-        <div class="info-product">
-          <h2 class="card-text">Alsometria Roja</h2>
-          <p class="price">$8990</p>
-          <h class="card-text">Descripción: Ramo entre 8 a 10 varas</h>
-          <h4 class="card-text">Duración: 15 días</h>
-          
-          
-          <button class="btn-add-cart">
-            Agregar al carrito
-          </button>
+  <div class="item">
+    <figure>
+      <img src="imagenes/FLOR2.png" alt="producto" />
+    </figure>
+    <div class="info-product">
+      <h2>Alsometria Azul</h2>
+      <p class="price">$7990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample2">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Alsometria Azul es una hermosa flor con pétalos vibrantes y una fragancia cautivadora. Ideal para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8 - 10</li>
+              <li>Altura: 30 cm</li>
+              <li>Color: Azul</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
         </div>
       </div>
+
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
-
-    <!--TERCERA CARD-->
-    <div class="item">  
-      <div class="card">
-          <img src="imagenes/FLOR3.png" class="card-img-top" alt="producto">
-          <div class="info-product">
-            <h2 class="card-text">Alsometria Rosa</h2>
-            <p class="price">$8990</p>
-            <h class="card-text">Descripción: Ramo entre 8 a 10 varas </h>
-            <h class="card-text">Duración: 15 días</h>
-            
-          
-            <button class="btn-add-cart">
-            Agregar al carrito
-            </button>
+  </div>
+  
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR3.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Alsometria Rosada</h2>
+      <p class="price">$8990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample3">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Alsometria Rosa es una hermosa flor con pétalos vibrantes y una fragancia cautivadora. Ideal para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8 - 10</li>
+              <li>Altura: 30 cm</li>
+              <li>Color: Rosa</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
         </div>
       </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR4.PNG"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Alsometria Morada</h2>
+      <p class="price">$8990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample4">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample4">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Alsometria Morada es una hermosa flor con pétalos vibrantes y una fragancia cautivadora. Ideal para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8 - 10</li>
+              <li>Altura: 30 cm</li>
+              <li>Color: Morado</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR5.PNG"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Alsometria Naranjo</h2>
+      <p class="price">$8990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample5">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Alsometria Naranjo es una hermosa flor con pétalos vibrantes y una fragancia cautivadora. Ideal para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8 - 10</li>
+              <li>Altura: 30 cm</li>
+              <li>Color: Naranja</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR6.PNG"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Alsometria Amarilla</h2>
+      <p class="price">$8990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample6">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample6">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Alsometria Amarilla es una hermosa flor con pétalos vibrantes y una fragancia cautivadora. Ideal para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8 - 10</li>
+              <li>Altura: 30 cm</li>
+              <li>Color: Amarillo</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR7.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Charmelia Amarilla</h2>
+      <p class="price">$9990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample7">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample7">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Charmelia Amarilla es una flor vibrante y duradera que añade un toque de alegría y frescura a cualquier arreglo floral. Con sus hermosos pétalos amarillos y su elegante porte, es perfecta para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8</li>
+              <li>Altura: 30 cm</li>
+              <li>Color: Amarilla</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR8.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Charmelia Naranjo</h2>
+      <p class="price">$9990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample8">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample8">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Charmelia Naranjo es una flor vibrante y duradera que añade un toque de alegría y frescura a cualquier arreglo floral. Con sus hermosos pétalos naranjas y su elegante porte, es perfecta para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8</li>
+              <li>Color: Naranjo</li>
+              <li>Altura: 40-50 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR9.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Charmelia Fucsia</h2>
+      <p class="price">$9990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample9">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample9">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Charmelia Fucsia es una flor vibrante y duradera que añade un toque de alegría y frescura a cualquier arreglo floral. Con sus hermosos pétalos fucsia y su elegante porte, es perfecta para cualquier ocasión especial.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 8</li>
+              <li>Color: Fucsia</li>
+              <li>Altura: 40-50 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR10.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Tulipan Blanco</h2>
+      <p class="price">$14990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample10" aria-expanded="false" aria-controls="collapseExample10">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample10">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>El Tulipán Blanco es una flor elegante y refinada, ideal para añadir un toque de pureza y sofisticación a cualquier arreglo floral. Sus pétalos blancos y su tallo largo lo hacen perfecto para eventos formales y celebraciones especiales.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Blanco</li>
+              <li>Altura: 50-60 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol</li>
+              <li>Duración: Media duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR11.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Tulipan Rojo - 10 varas</h2>
+      <p class="price">$14990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample11" aria-expanded="false" aria-controls="collapseExample11">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample11">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>El Tulipán Rojo es una flor elegante y refinada, ideal para añadir un toque de pureza y sofisticación a cualquier arreglo floral. Sus pétalos rojos y su tallo largo lo hacen perfecto para eventos formales y celebraciones especiales.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Rojo</li>
+              <li>Altura: 50-60 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol</li>
+              <li>Duración: Media duración en florero</li>
+              
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR12.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Tulipan Naranja</h2>
+      <p class="price">$14990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample12" aria-expanded="false" aria-controls="collapseExample12">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample12">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>El Tulipán Naranjo es una flor elegante y refinada, ideal para añadir un toque de pureza y sofisticación a cualquier arreglo floral. Sus pétalos naranjos y su tallo largo lo hacen perfecto para eventos formales y celebraciones especiales.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Naranjo</li>
+              <li>Altura: 50-60 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol</li>
+              <li>Duración: Media duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR13.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Mini Rosa Amarilla</h2>
+      <p class="price">$14990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample13" aria-expanded="false" aria-controls="collapseExample13">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample13">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Mini Rosa Amarilla es una flor vibrante y delicada que aporta alegría y energía a cualquier arreglo floral. Sus pétalos amarillos y tamaño compacto la hacen perfecta para cualquier ocasión, desde regalos hasta decoraciones.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Amarillo</li>
+              <li>Altura: 20-30 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR14.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Mini Rosa Blanco</h2>
+      <p class="price">$14990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample14" aria-expanded="false" aria-controls="collapseExample14">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample14">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>La Mini Rosa Blanco es una flor vibrante y delicada que aporta alegría y energía a cualquier arreglo floral. Sus pétalos blancos y tamaño compacto la hacen perfecta para cualquier ocasión, desde regalos hasta decoraciones.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Blanco</li>
+              <li>Altura: 20-30 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR15.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Mini Rosa Rosa</h2>
+      <p class="price">$14990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample15" aria-expanded="false" aria-controls="collapseExample15">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample15">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+          <p>La Mini Rosa Rosa es una flor vibrante y delicada que aporta alegría y energía a cualquier arreglo floral. Sus pétalos rosas y tamaño compacto la hacen perfecta para cualquier ocasión, desde regalos hasta decoraciones.</p>
+          <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Rosa</li>
+              <li>Altura: 20-30 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Larga duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR16.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Lilium Asiatico Naranjo</h2>
+      <p class="price">$15990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample16" aria-expanded="false" aria-controls="collapseExample16">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample16">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+            <p>El Lilium Asiático Naranjo es una flor exquisita y elegante que aporta un toque de frescura y sofisticación a cualquier arreglo floral. Con sus brillantes pétalos naranjas y su fragancia embriagadora, es perfecta para crear impresionantes arreglos florales y decoraciones.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Naranja</li>
+              <li>Altura: 60-70 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Media duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR17.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Lilium Asiatico Blanco</h2>
+      <p class="price">$15990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample17" aria-expanded="false" aria-controls="collapseExample17">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample17">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+          <p>El Lilium Asiático Blanco es una flor exquisita y elegante que aporta un toque de frescura y sofisticación a cualquier arreglo floral. Con sus brillantes pétalos blancos y su fragancia embriagadora, es perfecta para crear impresionantes arreglos florales y decoraciones.</p>
+          <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Blanco</li>
+              <li>Altura: 60-70 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Media duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
+    </div>
+  </div>
+  <div class="item">
+    <figure>
+      <img
+        src="imagenes/FLOR18.png"
+        alt="producto"
+      />
+    </figure>
+    <div class="info-product">
+      <h2>Lilium Asiatico Amarillo</h2>
+      <p class="price">$15990</p>
+      <button id="ver-detalles-btn" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample18" aria-expanded="false" aria-controls="collapseExample18">
+        Ver más detalles
+      </button>
+      <div class="collapse" id="collapseExample18">
+        <div class="card card-body">
+          <h3>Descripción</h3>
+          <p>El Lilium Asiático Amarillo es una flor exquisita y elegante que aporta un toque de frescura y sofisticación a cualquier arreglo floral. Con sus brillantes pétalos amarillos y su fragancia embriagadora, es perfecta para crear impresionantes arreglos florales y decoraciones.</p>
+            <h4>Detalles adicionales:</h4>
+            <ul>
+              <li>Varas: 10</li>
+              <li>Color: Amarillo</li>
+              <li>Altura: 60-70 cm</li>
+              <li>Riego: Moderado</li>
+              <li>Exposición: Pleno sol o sombra parcial</li>
+              <li>Duración: Media duración en florero</li>
+            </ul>
+        </div>
+      </div>
+      <button class="btn-add-cart">Añadir al carrito</button>
     </div>
   </div>
 </div>
@@ -245,7 +753,7 @@
 <!--PIE DE PAGINA-->
 <footer class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row"> 
       <div class="col-md-4">
         <h5 class="footer-title">VillaFlores</h5>
         
@@ -276,5 +784,8 @@
   </div>
 </footer>
 <script src="funciones.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
